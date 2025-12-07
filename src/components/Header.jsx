@@ -148,6 +148,16 @@ const Header = () => {
               >
                 Leaderboard
               </Link>
+              <Link
+                to="/creators"
+                className={`px-6 py-2 rounded-full font-semibold text-sm uppercase tracking-wide transition-all duration-300 ${
+                  location.pathname === "/creators"
+                    ? "bg-white/20 text-white shadow-md"
+                    : "text-white/70 hover:text-white hover:bg-white/10"
+                }`}
+              >
+                Creators
+              </Link>
               <button
                 onClick={() => setShowRegistrationForm(true)}
                 className="px-6 py-2 rounded-full font-semibold text-sm uppercase tracking-wide transition-all duration-300 text-white/70 hover:text-white hover:bg-white/10"

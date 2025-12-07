@@ -11,6 +11,11 @@ import check2 from "./check-02.svg";
 import loading1 from "./loading-01.svg";
 import yourlogo from "./yourlogo.svg";
 import LOGOTS from "./LOGOTs.png";
+import domino from "./Domino.svg";
+import kfc from "./kfc.svg";
+import cocacola from "./Coca-Cola.svg";
+import burgerking from "./burger-king.svg";
+import nestle from "./nestle.svg";
 import homeSmile from "./home-smile.svg";
 import file02 from "./file-02.svg";
 import searchMd from "./search-md.svg";
@@ -148,4 +153,9 @@ export {
   instagram,
   telegram,
   twitter,
+  domino,
+  kfc,
+  cocacola,
+  burgerking,
+  nestle,
 };
