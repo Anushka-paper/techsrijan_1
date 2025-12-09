@@ -11,13 +11,17 @@ import Services from "./components/Services";
 import LeaderboardNew from "./pages/leaderboard";
 import Home from "./pages/Home";
 import AdminNew from "./pages/AdminNew";
-import Events from "./pages/Events";
+
 import Flashcard from "./components/Flashcard";
 import Creators from "./pages/Creators";
-import BombDiffusion from "./pages/RCevents/BombDiffusion"
-import ElectroNFS from "./pages/RCevents/ElectroNFS"
-import ElectroTekken from "./pages/RCevents/ElectroTekken"
-import Sherlocked from "./pages/RCevents/Sherlocked"
+import BombDiffusion from "./pages/RCevents/BombDiffusion";
+import ElectroNFS from "./pages/RCevents/ElectroNFS";
+import ElectroTekken from "./pages/RCevents/ElectroTekken";
+import Sherlocked from "./pages/RCevents/Sherlocked";
+import Lamira from "./pages/TSCevents/Lamira";
+import MalaviyaAeromodelling from "./pages/TSCevents/MalaviyaAeromodelling";
+import ScienceExhibition from "./pages/TSCevents/ScienceExhibition";
+import Glimpses from "./pages/Glimpse";
 
 
 
@@ -26,16 +30,23 @@ const App = () => {
     <>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path ="/leaderboard" element={<LeaderboardNew />} />
+
         <Route path ='/admin' element = {<AdminNew/>}/>
-        <Route path ="/events" element ={<Events/>}/>
+        <Route path ="/glimpse" element ={<Glimpses/>}/>
+
         <Route path ="/flashcard" element ={<Flashcard/>}/>
         <Route path ="/creators" element ={<Creators/>}/>
+
+        {/* RC Events */}
         <Route path="/BD" element={<BombDiffusion/>}/>
         <Route path="/NFS" element={<ElectroNFS/>}/>
         <Route path="/Tekken" element={<ElectroTekken/>}/>
         <Route path="/Sher" element={<Sherlocked/>}/>
 
+        {/* TSC Events */}
+        <Route path="/Lamira" element={<Lamira/>}/>
+        <Route path="/Aeromodelling" element={<MalaviyaAeromodelling/>}/>
+        <Route path="/ScienceExpo" element={<ScienceExhibition/>}/>
       </Routes>
     </>
   );

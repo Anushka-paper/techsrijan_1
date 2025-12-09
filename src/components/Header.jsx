@@ -1,11 +1,13 @@
 import { Link, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { LOGOTS } from "../assets";
 import { registerTeam } from "../lib/laMiraService";
 
 const Header = () => {
   const location = useLocation();
   const [showRegistrationForm, setShowRegistrationForm] = useState(false);
+  const [showEventsPopup, setShowEventsPopup] = useState(false);
+  const [showRegistrationDropdown, setShowRegistrationDropdown] = useState(false);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState({ type: '', text: '' });
   const [paymentScreenshot, setPaymentScreenshot] = useState(null);
@@ -35,6 +37,18 @@ const Header = () => {
 
   // Replace this with your actual payment QR code image path
   const paymentQRCode = "/path/to/your/qr-code.png";
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!event.target.closest('.dropdown-container')) {
+        setShowRegistrationDropdown(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -128,16 +142,16 @@ const Header = () => {
               />
             </div>
             <div className="flex items-center gap-2">
-              <Link
-                to="/"
+              <button
+                onClick={() => setShowEventsPopup(true)}
                 className={`px-6 py-2 rounded-full font-semibold text-sm uppercase tracking-wide transition-all duration-300 ${
-                  location.pathname === "/"
+                  location.pathname === "/" || location.pathname.startsWith("/BD") || location.pathname.startsWith("/NFS") || location.pathname.startsWith("/Tekken") || location.pathname.startsWith("/Sher") || location.pathname.startsWith("/Lamira") || location.pathname.startsWith("/Aero") || location.pathname.startsWith("/Science")
                     ? "bg-white/20 text-white shadow-md"
                     : "text-white/70 hover:text-white hover:bg-white/10"
                 }`}
               >
                 Events
-              </Link>
+              </button>
               <Link
                 to="/leaderboard"
                 className={`px-6 py-2 rounded-full font-semibold text-sm uppercase tracking-wide transition-all duration-300 ${
@@ -146,8 +160,41 @@ const Header = () => {
                     : "text-white/70 hover:text-white hover:bg-white/10"
                 }`}
               >
-                Leaderboard
+                {/* Leaderboard */}
               </Link>
+              <Link
+                to="/glimpse"
+                className={`px-6 py-2 rounded-full font-semibold text-sm uppercase tracking-wide transition-all duration-300 ${
+                  location.pathname === "/glimpse"
+                    ? "bg-white/20 text-white shadow-md"
+                    : "text-white/70 hover:text-white hover:bg-white/10"
+                }`}
+              >
+                Glimpse
+              </Link>
+              {/* <div className="relative dropdown-container">
+                <button
+                  onClick={() => setShowRegistrationDropdown(!showRegistrationDropdown)}
+                  className="px-6 py-2 rounded-full font-semibold text-sm uppercase tracking-wide transition-all duration-300 text-white/70 hover:text-white hover:bg-white/10 flex items-center gap-2"
+                >
+                  Registration
+                  <span className={`transition-transform duration-300 ${showRegistrationDropdown ? 'rotate-180' : ''}`}>▼</span>
+                </button>
+
+                {showRegistrationDropdown && (
+                  <div className="absolute top-full mt-2 right-0 backdrop-blur-sm bg-black/10 border border-white/10 rounded-2xl shadow-2xl overflow-hidden min-w-[200px] z-50">
+                    <button
+                      onClick={() => {
+                        setShowRegistrationForm(true);
+                        setShowRegistrationDropdown(false);
+                      }}
+                      className="w-full px-6 py-3 text-left text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300 font-semibold text-sm"
+                    >
+                      LA MIRA
+                    </button>
+                  </div>
+                )}
+              </div> */}
               <Link
                 to="/creators"
                 className={`px-6 py-2 rounded-full font-semibold text-sm uppercase tracking-wide transition-all duration-300 ${
@@ -158,12 +205,6 @@ const Header = () => {
               >
                 Creators
               </Link>
-              <button
-                onClick={() => setShowRegistrationForm(true)}
-                className="px-6 py-2 rounded-full font-semibold text-sm uppercase tracking-wide transition-all duration-300 text-white/70 hover:text-white hover:bg-white/10"
-              >
-                Registration
-              </button>
             </div>
           </div>
         </nav>
@@ -422,6 +463,114 @@ const Header = () => {
                   </button>
                 </div>
               </form>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Events Popup Modal */}
+      {showEventsPopup && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" onClick={() => setShowEventsPopup(false)}>
+          <div className="bg-black border border-white/30 rounded-3xl shadow-2xl max-w-4xl w-full max-h-[80vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+            <div className="p-8">
+              {/* Header */}
+              <div className="flex justify-between items-center mb-8">
+                <h2 className="text-4xl font-bold text-white">All Events</h2>
+                <button
+                  onClick={() => setShowEventsPopup(false)}
+                  className="backdrop-blur-md bg-white/10 border border-white/20 rounded-xl w-10 h-10 flex items-center justify-center text-white/70 hover:text-white hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:rotate-90"
+                >
+                  <span className="text-2xl leading-none">×</span>
+                </button>
+              </div>
+
+              {/* RC Events Section */}
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold text-white mb-4 border-b border-white/30 pb-2">
+                  RC Events
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <Link
+                    to="/BD"
+                    onClick={() => setShowEventsPopup(false)}
+                    className="group p-6 bg-white/10 border border-white/20 rounded-2xl hover:bg-white/20 hover:border-white/40 hover:scale-105 transition-all duration-300"
+                  >
+                    <h4 className="text-xl font-semibold text-white group-hover:text-purple-400 transition-colors duration-300">
+                      Bomb Diffusion
+                    </h4>
+                    <p className="text-white/60 text-sm mt-2">Technical Challenge Event</p>
+                  </Link>
+                  <Link
+                    to="/NFS"
+                    onClick={() => setShowEventsPopup(false)}
+                    className="group p-6 bg-white/10 border border-white/20 rounded-2xl hover:bg-white/20 hover:border-white/40 hover:scale-105 transition-all duration-300"
+                  >
+                    <h4 className="text-xl font-semibold text-white group-hover:text-purple-400 transition-colors duration-300">
+                      Electro NFS
+                    </h4>
+                    <p className="text-white/60 text-sm mt-2">Racing Competition</p>
+                  </Link>
+                  <Link
+                    to="/Tekken"
+                    onClick={() => setShowEventsPopup(false)}
+                    className="group p-6 bg-white/10 border border-white/20 rounded-2xl hover:bg-white/20 hover:border-white/40 hover:scale-105 transition-all duration-300"
+                  >
+                    <h4 className="text-xl font-semibold text-white group-hover:text-purple-400 transition-colors duration-300">
+                      Electro Tekken
+                    </h4>
+                    <p className="text-white/60 text-sm mt-2">Gaming Tournament</p>
+                  </Link>
+                  <Link
+                    to="/Sher"
+                    onClick={() => setShowEventsPopup(false)}
+                    className="group p-6 bg-white/10 border border-white/20 rounded-2xl hover:bg-white/20 hover:border-white/40 hover:scale-105 transition-all duration-300"
+                  >
+                    <h4 className="text-xl font-semibold text-white group-hover:text-purple-400 transition-colors duration-300">
+                      Sherlocked
+                    </h4>
+                    <p className="text-white/60 text-sm mt-2">Mystery Solving Challenge</p>
+                  </Link>
+                </div>
+              </div>
+
+              {/* TSC Events Section */}
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-4 border-b border-white/30 pb-2">
+                  TSC Events
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <Link
+                    to="/Lamira"
+                    onClick={() => setShowEventsPopup(false)}
+                    className="group p-6 bg-white/10 border border-white/20 rounded-2xl hover:bg-white/20 hover:border-white/40 hover:scale-105 transition-all duration-300"
+                  >
+                    <h4 className="text-xl font-semibold text-white group-hover:text-pink-400 transition-colors duration-300">
+                      La Mira
+                    </h4>
+                    <p className="text-white/60 text-sm mt-2">Treasure Hunt Adventure</p>
+                  </Link>
+                  <Link
+                    to="/Aeromodelling"
+                    onClick={() => setShowEventsPopup(false)}
+                    className="group p-6 bg-white/10 border border-white/20 rounded-2xl hover:bg-white/20 hover:border-white/40 hover:scale-105 transition-all duration-300"
+                  >
+                    <h4 className="text-xl font-semibold text-white group-hover:text-pink-400 transition-colors duration-300">
+                      Malaviya Aeromodelling
+                    </h4>
+                    <p className="text-white/60 text-sm mt-2">Drone & Aircraft Competition</p>
+                  </Link>
+                  <Link
+                    to="/ScienceExpo"
+                    onClick={() => setShowEventsPopup(false)}
+                    className="group p-6 bg-white/10 border border-white/20 rounded-2xl hover:bg-white/20 hover:border-white/40 hover:scale-105 transition-all duration-300"
+                  >
+                    <h4 className="text-xl font-semibold text-white group-hover:text-pink-400 transition-colors duration-300">
+                      Science Exhibition
+                    </h4>
+                    <p className="text-white/60 text-sm mt-2">Innovation Showcase</p>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>

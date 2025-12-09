@@ -1,34 +1,31 @@
-import Header from '../components/Header';
-import BentoGrid from '../components/BentoGrid';
-import EventPoster from '../components/EventPoster';
-import EventDescription from '../components/EventDescription';
-import EventRules from '../components/EventRules';
-import EventRegistrationButton from '../components/EventRegistrationButton';
-import EventLeaderboardButton from '../components/EventLeaderboardButton';
+import Header from '../../components/Header';
+import BentoGrid from '../../components/BentoGrid';
+import EventPoster from '../../components/EventPoster';
+import EventDescription from '../../components/EventDescription';
+import EventRules from '../../components/EventRules';
+import EventRegistrationButton from '../../components/EventRegistrationButton';
+import EventLeaderboardButton from '../../components/EventLeaderboardButton';
 import { Link } from 'react-router-dom';
+import malaviyaPoster from '../../assets/malaviya.jpg';
 
-const Events = () => {
+const MalaviyaAeromodelling = () => {
   // Single Event Data - Customize this for LA MIRA event
   const event = {
-    title: "LA MIRA",
-    category: "Adventure",
-    poster: "/path/to/lamira-poster.jpg", // Replace with your actual poster path
-    description: "The ultimate treasure hunt experience across the campus. Solve puzzles, crack codes, and discover hidden clues to find the treasure. Test your problem-solving skills and teamwork in this thrilling adventure that will take you through various locations across the campus.",
+    title: "MALAVIYA AEROMODELLING COMPETITION",
+    category: "Competition",
+    poster: malaviyaPoster, // Replace with your actual poster path
+    description: "The Malaviya Aeromodelling Competition is an exciting multi-round aerial challenge where teams design, build, and fly their own aircraft models. It tests engineering skills, real-time decision-making, and precise flying ability. Teams compete across gliding, powered-range, and a final surprise round—each designed to evaluate stability, control, and innovation. Only the most skilled and aerodynamic-savvy teams will rise through the rounds and claim the title of Malaviya Aero Champions.",
     rules: [
-      "Team size: 3 members (1 leader + 2 members)",
-      "All team members must be from the same institution",
-      "Registration fee: ₹100 per team",
-      "Participants must carry valid college ID",
-      "Use of mobile phones is restricted during the event",
-      "Follow all instructions given by event coordinators",
-      "Teams will be disqualified for any unfair practices",
-      "Decision of judges will be final"
+        "Each team has 3-5 members (including 1 pilot), and a college/school may send any number of teams.",
+        "All team members must be students of the same school/college and must carry a valid student ID card.",
+        "One student can join only one team and cannot fly or operate aircraft of any other team.",
+        "The pilot must be a registered member of that team or an official pilot provided by the organizers.",
     ],
-    googleFormLink: "https://forms.google.com/your-form-link",
-    leaderboardLink: "https://mits.ac.in/leaderboard/lamira",
+    googleFormLink: "https://forms.gle/1EJjHfB6KBRk5jCN9",
+    leaderboardLink: "",
     eventDate: "December 12, 2025",
-    eventTime: "10:00 AM - 2:00 PM",
-    venue: "Campus Wide"
+    eventTime: "10:00 AM - 5:00 PM",
+    venue: "MMMUT Campus"
   };
 
   return (
@@ -125,4 +122,4 @@ const Events = () => {
   );
 };
 
-export default Events;
+export default MalaviyaAeromodelling;
