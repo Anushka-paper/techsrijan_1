@@ -206,7 +206,7 @@ const LeaderboardNew = () => {
 
   // Get rank indicator style based on position
   const getRankStyle = (position) => {
-    if (position === 1) return { background: 'linear-gradient(135deg, #ffd700, #ffed4e)', color: '#000' };
+    if (position === 1) return { background: 'linear-gradient(135deg, #EF4444, #FCA5A5)', color: '#000' };
     if (position === 2) return { background: 'linear-gradient(135deg, #c0c0c0, #e5e7eb)', color: '#000' };
     if (position === 3) return { background: 'linear-gradient(135deg, #cd7f32, #d97706)', color: '#fff' };
     if (position <= 5) return { background: 'linear-gradient(135deg, #dc2626, #b91c1c)', color: '#fff' };
@@ -260,8 +260,8 @@ const LeaderboardNew = () => {
       right: 0,
       bottom: 0,
       backgroundImage: `
-        linear-gradient(rgba(255, 215, 0, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 215, 0, 0.03) 1px, transparent 1px)
+        linear-gradient(rgba(239, 68, 68, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(239, 68, 68, 0.03) 1px, transparent 1px)
       `,
       backgroundSize: '50px 50px',
       pointerEvents: 'none',
@@ -279,22 +279,22 @@ const LeaderboardNew = () => {
 
     statCard: {
       background: 'rgba(0, 0, 0, 0.85)',
-      border: '2px solid rgba(255, 215, 0, 0.3)',
+      border: '2px solid rgba(239, 68, 68, 0.3)',
       padding: '1.25rem',
       position: 'relative',
       overflow: 'visible',
-      boxShadow: '0 0 20px rgba(255, 215, 0, 0.1), inset 0 0 20px rgba(0, 0, 0, 0.5)'
+      boxShadow: '0 0 20px rgba(239, 68, 68, 0.1), inset 0 0 20px rgba(0, 0, 0, 0.5)'
     },
 
     statLabel: {
       fontSize: '0.75rem',
-      color: '#FFD700',
+      color: '#EF4444',
       fontWeight: '700',
       textTransform: 'uppercase',
       letterSpacing: '0.15em',
       fontFamily: '"Courier New", monospace',
       marginBottom: '0.5rem',
-      textShadow: '0 0 10px rgba(255, 215, 0, 0.4)'
+      textShadow: '0 0 10px rgba(239, 68, 68, 0.4)'
     },
 
     statValue: {
@@ -309,24 +309,24 @@ const LeaderboardNew = () => {
     // Mission Status Banner
     missionBanner: {
       background: `
-        linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(255, 215, 0, 0.15) 100%)
+        linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(239, 68, 68, 0.15) 100%)
       `,
-      border: '2px solid rgba(255, 215, 0, 0.4)',
-      borderLeft: '6px solid #FFD700',
+      border: '2px solid rgba(239, 68, 68, 0.4)',
+      borderLeft: '6px solid #EF4444',
       padding: '1rem 1.5rem',
       marginBottom: '2rem',
       position: 'relative',
-      boxShadow: '0 0 30px rgba(255, 215, 0, 0.2), inset 0 0 20px rgba(0, 0, 0, 0.5)'
+      boxShadow: '0 0 30px rgba(239, 68, 68, 0.2), inset 0 0 20px rgba(0, 0, 0, 0.5)'
     },
 
     missionTitle: {
       fontSize: '0.875rem',
-      color: '#FFD700',
+      color: '#EF4444',
       fontWeight: '800',
       textTransform: 'uppercase',
       letterSpacing: '0.2em',
       fontFamily: '"Courier New", monospace',
-      textShadow: '0 0 15px rgba(255, 215, 0, 0.6)',
+      textShadow: '0 0 15px rgba(239, 68, 68, 0.6)',
       marginBottom: '0.25rem'
     },
 
@@ -344,16 +344,16 @@ const LeaderboardNew = () => {
       top: '5rem',
       right: '2rem',
       background: 'rgba(0, 0, 0, 0.9)',
-      border: '2px solid rgba(255, 215, 0, 0.4)',
+      border: '2px solid rgba(239, 68, 68, 0.4)',
       padding: '0.75rem 1rem',
       zIndex: 50,
-      boxShadow: '0 0 20px rgba(255, 215, 0, 0.2), inset 0 0 15px rgba(0, 0, 0, 0.5)',
+      boxShadow: '0 0 20px rgba(239, 68, 68, 0.2), inset 0 0 15px rgba(0, 0, 0, 0.5)',
       animation: 'slideInRight 0.6s ease-out'
     },
 
     hudClockLabel: {
       fontSize: '0.65rem',
-      color: '#FFD700',
+      color: '#EF4444',
       fontWeight: '700',
       fontFamily: '"Courier New", monospace',
       textTransform: 'uppercase',
@@ -376,17 +376,17 @@ const LeaderboardNew = () => {
       top: '9rem',
       right: '2rem',
       background: 'rgba(0, 0, 0, 0.9)',
-      border: '2px solid rgba(255, 215, 0, 0.4)',
-      borderLeft: '4px solid #FFD700',
+      border: '2px solid rgba(239, 68, 68, 0.4)',
+      borderLeft: '4px solid #EF4444',
       padding: '0.75rem 1rem',
       zIndex: 50,
-      boxShadow: '0 0 20px rgba(255, 215, 0, 0.2), inset 0 0 15px rgba(0, 0, 0, 0.5)',
+      boxShadow: '0 0 20px rgba(239, 68, 68, 0.2), inset 0 0 15px rgba(0, 0, 0, 0.5)',
       animation: 'slideInRight 0.8s ease-out'
     },
 
     missionIndicatorText: {
       fontSize: '0.7rem',
-      color: '#FFD700',
+      color: '#EF4444',
       fontWeight: '800',
       fontFamily: '"Courier New", monospace',
       textTransform: 'uppercase',
@@ -400,15 +400,15 @@ const LeaderboardNew = () => {
       background: `
         linear-gradient(90deg,
           transparent 0%,
-          rgba(255, 215, 0, 0.3) 20%,
-          rgba(255, 215, 0, 0.8) 50%,
-          rgba(255, 215, 0, 0.3) 80%,
+          rgba(239, 68, 68, 0.3) 20%,
+          rgba(239, 68, 68, 0.8) 50%,
+          rgba(239, 68, 68, 0.3) 80%,
           transparent 100%
         )
       `,
       margin: '2rem 0',
       position: 'relative',
-      boxShadow: '0 0 10px rgba(255, 215, 0, 0.3)'
+      boxShadow: '0 0 10px rgba(239, 68, 68, 0.3)'
     },
 
     dividerIcon: {
@@ -417,21 +417,21 @@ const LeaderboardNew = () => {
       left: '50%',
       transform: 'translate(-50%, -50%)',
       background: 'rgba(0, 0, 0, 0.9)',
-      color: '#FFD700',
+      color: '#EF4444',
       padding: '0.5rem 1rem',
       fontSize: '0.75rem',
       fontWeight: '800',
       fontFamily: '"Courier New", monospace',
       textTransform: 'uppercase',
       letterSpacing: '0.15em',
-      border: '2px solid rgba(255, 215, 0, 0.4)',
-      boxShadow: '0 0 20px rgba(255, 215, 0, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.5)'
+      border: '2px solid rgba(239, 68, 68, 0.4)',
+      boxShadow: '0 0 20px rgba(239, 68, 68, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.5)'
     },
 
     institutionBar: {
       background: 'rgba(0, 0, 0, 0.95)',
       backdropFilter: 'blur(16px)',
-      borderBottom: '2px solid rgba(255, 215, 0, 0.3)',
+      borderBottom: '2px solid rgba(239, 68, 68, 0.3)',
       padding: '0.75rem 0',
       position: 'sticky',
       top: 0,
@@ -439,11 +439,11 @@ const LeaderboardNew = () => {
       textAlign: 'center',
       fontSize: '0.875rem',
       fontWeight: '700',
-      color: '#FFD700',
+      color: '#EF4444',
       textTransform: 'uppercase',
       letterSpacing: '0.15em',
       fontFamily: '"Courier New", monospace',
-      textShadow: '0 0 10px rgba(255, 215, 0, 0.4)'
+      textShadow: '0 0 10px rgba(239, 68, 68, 0.4)'
     },
 
     container: {
@@ -457,12 +457,12 @@ const LeaderboardNew = () => {
       margin: '3rem 0 2rem',
       position: 'relative',
       background: 'rgba(0, 0, 0, 0.85)',
-      border: '2px solid rgba(255, 215, 0, 0.4)',
+      border: '2px solid rgba(239, 68, 68, 0.4)',
       borderRadius: '8px',
       padding: '2rem',
       backdropFilter: 'blur(10px)',
       boxShadow: `
-        0 0 30px rgba(255, 215, 0, 0.15),
+        0 0 30px rgba(239, 68, 68, 0.15),
         inset 0 0 20px rgba(0, 0, 0, 0.5)
       `
     },
@@ -472,19 +472,19 @@ const LeaderboardNew = () => {
       position: 'absolute',
       width: '20px',
       height: '20px',
-      border: '3px solid #FFD700',
+      border: '3px solid #EF4444',
       animation: 'bracketGlow 2.5s ease-in-out infinite'
     },
 
     championshipTitle: {
       fontSize: 'clamp(2.5rem, 5vw, 4rem)',
       fontWeight: '900',
-      color: '#FFD700',
+      color: '#EF4444',
       textTransform: 'uppercase',
       letterSpacing: '0.15em',
       textShadow: `
-        0 0 20px rgba(255, 215, 0, 0.6),
-        0 0 40px rgba(255, 215, 0, 0.3),
+        0 0 20px rgba(239, 68, 68, 0.6),
+        0 0 40px rgba(239, 68, 68, 0.3),
         3px 3px 6px rgba(0, 0, 0, 0.8)
       `,
       fontFamily: '"Courier New", monospace',
@@ -507,7 +507,7 @@ const LeaderboardNew = () => {
     controlsContainer: {
       background: 'rgba(0, 0, 0, 0.85)',
       backdropFilter: 'blur(16px)',
-      border: '2px solid rgba(255, 215, 0, 0.3)',
+      border: '2px solid rgba(239, 68, 68, 0.3)',
       borderRadius: '0px',
       padding: '1.5rem',
       marginBottom: '2rem',
@@ -515,7 +515,7 @@ const LeaderboardNew = () => {
       flexWrap: 'wrap',
       alignItems: 'center',
       gap: '1rem',
-      boxShadow: '0 0 20px rgba(255, 215, 0, 0.1), inset 0 0 20px rgba(0, 0, 0, 0.5)'
+      boxShadow: '0 0 20px rgba(239, 68, 68, 0.1), inset 0 0 20px rgba(0, 0, 0, 0.5)'
     },
 
     searchContainer: {
@@ -528,7 +528,7 @@ const LeaderboardNew = () => {
       width: '100%',
       padding: '0.75rem 1rem 0.75rem 2.75rem',
       background: 'rgba(0, 0, 0, 0.9)',
-      border: '2px solid rgba(255, 215, 0, 0.3)',
+      border: '2px solid rgba(239, 68, 68, 0.3)',
       borderRadius: '0px',
       color: '#FFFFFF',
       fontSize: '0.925rem',
@@ -549,7 +549,7 @@ const LeaderboardNew = () => {
     filterSelect: {
       padding: '0.75rem 2.5rem 0.75rem 1rem',
       background: 'rgba(0, 0, 0, 0.9)',
-      border: '2px solid rgba(255, 215, 0, 0.3)',
+      border: '2px solid rgba(239, 68, 68, 0.3)',
       borderRadius: '0px',
       color: '#FFFFFF',
       fontSize: '0.925rem',
@@ -607,7 +607,7 @@ const LeaderboardNew = () => {
       position: 'absolute',
       width: '12px',
       height: '12px',
-      border: '2px solid rgba(255, 215, 0, 0.6)',
+      border: '2px solid rgba(239, 68, 68, 0.6)',
       transition: 'all 0.3s ease',
       animation: 'bracketGlow 3s ease-in-out infinite'
     },
@@ -627,9 +627,9 @@ const LeaderboardNew = () => {
       textTransform: 'uppercase',
       letterSpacing: '0.1em',
       background: 'rgba(0, 0, 0, 0.9)',
-      border: '2px solid rgba(255, 215, 0, 0.6)',
+      border: '2px solid rgba(239, 68, 68, 0.6)',
       padding: '0.5rem 0.75rem',
-      boxShadow: '0 0 15px rgba(255, 215, 0, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.5)'
+      boxShadow: '0 0 15px rgba(239, 68, 68, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.5)'
     },
 
     teamHeader: {
@@ -643,13 +643,13 @@ const LeaderboardNew = () => {
     teamName: {
       fontSize: '1.5rem',
       fontWeight: '800',
-      color: '#FFD700',
+      color: '#EF4444',
       marginBottom: '0.25rem',
       lineHeight: '1.3',
       fontFamily: '"Courier New", monospace',
       textTransform: 'uppercase',
       letterSpacing: '0.05em',
-      textShadow: '0 0 10px rgba(255, 215, 0, 0.4), 2px 2px 4px rgba(0, 0, 0, 0.8)'
+      textShadow: '0 0 10px rgba(239, 68, 68, 0.4), 2px 2px 4px rgba(0, 0, 0, 0.8)'
     },
 
     pointsContainer: {
@@ -668,12 +668,12 @@ const LeaderboardNew = () => {
 
     pointsLabel: {
       fontSize: '0.75rem',
-      color: '#FFD700',
+      color: '#EF4444',
       fontWeight: '700',
       textTransform: 'uppercase',
       letterSpacing: '0.1em',
       fontFamily: '"Courier New", monospace',
-      textShadow: '0 0 5px rgba(255, 215, 0, 0.4)'
+      textShadow: '0 0 5px rgba(239, 68, 68, 0.4)'
     },
 
     leaderInfo: {
@@ -690,7 +690,7 @@ const LeaderboardNew = () => {
 
     infoLabel: {
       fontSize: '0.75rem',
-      color: '#FFD700',
+      color: '#EF4444',
       fontWeight: '700',
       textTransform: 'uppercase',
       letterSpacing: '0.1em',
@@ -734,9 +734,9 @@ const LeaderboardNew = () => {
     paginationButton: {
       padding: '0.75rem 1rem',
       background: 'rgba(0, 0, 0, 0.85)',
-      border: '2px solid rgba(255, 215, 0, 0.3)',
+      border: '2px solid rgba(239, 68, 68, 0.3)',
       borderRadius: '0px',
-      color: '#FFD700',
+      color: '#EF4444',
       fontSize: '0.925rem',
       fontWeight: '700',
       fontFamily: '"Courier New", monospace',
@@ -750,9 +750,9 @@ const LeaderboardNew = () => {
 
     paginationButtonActive: {
       background: 'rgba(0, 0, 0, 0.95)',
-      borderColor: '#FFD700',
-      color: '#FFD700',
-      boxShadow: '0 0 20px rgba(255, 215, 0, 0.5), inset 0 0 15px rgba(0, 0, 0, 0.5)'
+      borderColor: '#EF4444',
+      color: '#EF4444',
+      boxShadow: '0 0 20px rgba(239, 68, 68, 0.5), inset 0 0 15px rgba(0, 0, 0, 0.5)'
     },
 
     footer: {
@@ -763,7 +763,7 @@ const LeaderboardNew = () => {
     },
 
     footerText: {
-      color: '#FFD700',
+      color: '#EF4444',
       fontSize: '0.875rem',
       lineHeight: '1.6',
       fontFamily: '"Courier New", monospace',
@@ -783,8 +783,8 @@ const LeaderboardNew = () => {
     spinner: {
       width: '3rem',
       height: '3rem',
-      border: '4px solid rgba(255, 215, 0, 0.2)',
-      borderTop: '4px solid #FFD700',
+      border: '4px solid rgba(239, 68, 68, 0.2)',
+      borderTop: '4px solid #EF4444',
       borderRadius: '50%',
       animation: 'spin 1s linear infinite'
     },
@@ -792,11 +792,11 @@ const LeaderboardNew = () => {
     loadingText: {
       fontSize: '1.125rem',
       fontWeight: '800',
-      color: '#FFD700',
+      color: '#EF4444',
       fontFamily: '"Courier New", monospace',
       textTransform: 'uppercase',
       letterSpacing: '0.15em',
-      textShadow: '0 0 10px rgba(255, 215, 0, 0.5)'
+      textShadow: '0 0 10px rgba(239, 68, 68, 0.5)'
     },
 
     // Team Performance Analytics Dashboard Styles - GTA Theme
@@ -807,7 +807,7 @@ const LeaderboardNew = () => {
       right: 0,
       bottom: 0,
       background: `
-        radial-gradient(ellipse at center, rgba(255, 215, 0, 0.05) 0%, rgba(10, 10, 10, 0.98) 70%),
+        radial-gradient(ellipse at center, rgba(239, 68, 68, 0.05) 0%, rgba(10, 10, 10, 0.98) 70%),
         repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px)
       `,
       backdropFilter: 'blur(16px)',
@@ -823,7 +823,7 @@ const LeaderboardNew = () => {
       background: `
         linear-gradient(135deg, rgba(10, 10, 10, 0.98) 0%, rgba(15, 15, 15, 0.98) 50%, rgba(5, 5, 5, 0.98) 100%)
       `,
-      border: '3px solid rgba(255, 215, 0, 0.4)',
+      border: '3px solid rgba(239, 68, 68, 0.4)',
       borderRadius: '0px',
       maxWidth: '1100px',
       width: '90%',
@@ -832,7 +832,7 @@ const LeaderboardNew = () => {
       position: 'relative',
       boxShadow: `
         0 32px 120px rgba(0, 0, 0, 0.9),
-        0 0 40px rgba(255, 215, 0, 0.2),
+        0 0 40px rgba(239, 68, 68, 0.2),
         inset 0 0 30px rgba(0, 0, 0, 0.8)
       `,
       animation: 'dashboardSlideUp 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)'
@@ -843,7 +843,7 @@ const LeaderboardNew = () => {
       background: `
         linear-gradient(180deg, rgba(10, 10, 10, 0.95) 0%, rgba(0, 0, 0, 0.95) 100%)
       `,
-      borderBottom: '2px solid rgba(255, 215, 0, 0.4)',
+      borderBottom: '2px solid rgba(239, 68, 68, 0.4)',
       padding: '1.5rem 2rem',
       position: 'relative',
       backdropFilter: 'blur(20px)'
@@ -854,11 +854,11 @@ const LeaderboardNew = () => {
       top: '1rem',
       right: '1.5rem',
       background: 'rgba(0, 0, 0, 0.9)',
-      border: '2px solid rgba(255, 215, 0, 0.6)',
+      border: '2px solid rgba(239, 68, 68, 0.6)',
       borderRadius: '0px',
       width: '2.5rem',
       height: '2.5rem',
-      color: '#FFD700',
+      color: '#EF4444',
       fontSize: '1.125rem',
       cursor: 'pointer',
       display: 'flex',
@@ -867,7 +867,7 @@ const LeaderboardNew = () => {
       transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
       fontWeight: '700',
       fontFamily: '"Courier New", monospace',
-      boxShadow: '0 0 15px rgba(255, 215, 0, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.5)'
+      boxShadow: '0 0 15px rgba(239, 68, 68, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.5)'
     },
 
     headerTop: {
@@ -884,12 +884,12 @@ const LeaderboardNew = () => {
     teamTitle: {
       fontSize: '2rem',
       fontWeight: '900',
-      color: '#FFD700',
+      color: '#EF4444',
       marginBottom: '0.25rem',
       letterSpacing: '0.1em',
       fontFamily: '"Courier New", monospace',
       textTransform: 'uppercase',
-      textShadow: '0 0 20px rgba(255, 215, 0, 0.6), 3px 3px 6px rgba(0, 0, 0, 0.8)'
+      textShadow: '0 0 20px rgba(239, 68, 68, 0.6), 3px 3px 6px rgba(0, 0, 0, 0.8)'
     },
 
     teamSubtitle: {
@@ -907,16 +907,16 @@ const LeaderboardNew = () => {
       alignItems: 'center',
       gap: '0.375rem',
       background: 'rgba(0, 0, 0, 0.9)',
-      color: '#FFD700',
+      color: '#EF4444',
       padding: '0.5rem 1rem',
-      border: '2px solid #FFD700',
+      border: '2px solid #EF4444',
       borderRadius: '0px',
       fontSize: '1rem',
       fontWeight: '800',
       fontFamily: '"Courier New", monospace',
       textTransform: 'uppercase',
       letterSpacing: '0.1em',
-      boxShadow: '0 0 20px rgba(255, 215, 0, 0.4), inset 0 0 10px rgba(0, 0, 0, 0.5)'
+      boxShadow: '0 0 20px rgba(239, 68, 68, 0.4), inset 0 0 10px rgba(0, 0, 0, 0.5)'
     },
 
     scoreDisplay: {
@@ -936,7 +936,7 @@ const LeaderboardNew = () => {
 
     maxScore: {
       fontSize: '1rem',
-      color: '#FFD700',
+      color: '#EF4444',
       fontWeight: '700',
       fontFamily: '"Courier New", monospace',
       textTransform: 'uppercase',
@@ -990,10 +990,10 @@ const LeaderboardNew = () => {
     glassPanel: {
       background: 'rgba(0, 0, 0, 0.85)',
       backdropFilter: 'blur(20px)',
-      border: '2px solid rgba(255, 215, 0, 0.3)',
+      border: '2px solid rgba(239, 68, 68, 0.3)',
       borderRadius: '0px',
       padding: '1.5rem',
-      boxShadow: '0 0 20px rgba(255, 215, 0, 0.1), inset 0 0 20px rgba(0, 0, 0, 0.5)',
+      boxShadow: '0 0 20px rgba(239, 68, 68, 0.1), inset 0 0 20px rgba(0, 0, 0, 0.5)',
       overflow: 'visible',
       position: 'relative',
       animation: 'fadeInUp 0.5s ease-out'
@@ -1004,7 +1004,7 @@ const LeaderboardNew = () => {
       position: 'absolute',
       width: '15px',
       height: '15px',
-      border: '2px solid rgba(255, 215, 0, 0.6)',
+      border: '2px solid rgba(239, 68, 68, 0.6)',
       animation: 'bracketGlow 3s ease-in-out infinite'
     },
 
@@ -1050,15 +1050,15 @@ const LeaderboardNew = () => {
       top: '1rem',
       right: '5rem',
       background: 'rgba(0, 0, 0, 0.95)',
-      border: '2px solid rgba(255, 215, 0, 0.5)',
+      border: '2px solid rgba(239, 68, 68, 0.5)',
       padding: '0.5rem 1rem',
       zIndex: 10,
-      boxShadow: '0 0 20px rgba(255, 215, 0, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.5)'
+      boxShadow: '0 0 20px rgba(239, 68, 68, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.5)'
     },
 
     missionIdText: {
       fontSize: '0.7rem',
-      color: '#FFD700',
+      color: '#EF4444',
       fontWeight: '700',
       fontFamily: '"Courier New", monospace',
       textTransform: 'uppercase',
@@ -1091,12 +1091,12 @@ const LeaderboardNew = () => {
       width: '120px',
       height: '120px',
       background: `
-        radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%),
-        conic-gradient(from 0deg, transparent 0deg, rgba(255, 215, 0, 0.3) 45deg, transparent 90deg)
+        radial-gradient(circle, rgba(239, 68, 68, 0.1) 0%, transparent 70%),
+        conic-gradient(from 0deg, transparent 0deg, rgba(239, 68, 68, 0.3) 45deg, transparent 90deg)
       `,
-      border: '2px solid rgba(255, 215, 0, 0.4)',
+      border: '2px solid rgba(239, 68, 68, 0.4)',
       borderRadius: '50%',
-      boxShadow: '0 0 30px rgba(255, 215, 0, 0.2), inset 0 0 20px rgba(0, 0, 0, 0.5)',
+      boxShadow: '0 0 30px rgba(239, 68, 68, 0.2), inset 0 0 20px rgba(0, 0, 0, 0.5)',
       animation: 'radarSpin 4s linear infinite',
       zIndex: 5
     },
@@ -1108,9 +1108,9 @@ const LeaderboardNew = () => {
       transform: 'translate(-50%, -50%)',
       width: '8px',
       height: '8px',
-      background: '#FFD700',
+      background: '#EF4444',
       borderRadius: '50%',
-      boxShadow: '0 0 15px rgba(255, 215, 0, 0.8)'
+      boxShadow: '0 0 15px rgba(239, 68, 68, 0.8)'
     },
 
     // Section Divider for Popup
@@ -1119,15 +1119,15 @@ const LeaderboardNew = () => {
       background: `
         linear-gradient(90deg,
           transparent 0%,
-          rgba(255, 215, 0, 0.3) 20%,
-          rgba(255, 215, 0, 0.8) 50%,
-          rgba(255, 215, 0, 0.3) 80%,
+          rgba(239, 68, 68, 0.3) 20%,
+          rgba(239, 68, 68, 0.8) 50%,
+          rgba(239, 68, 68, 0.3) 80%,
           transparent 100%
         )
       `,
       margin: '1.5rem 0',
       position: 'relative',
-      boxShadow: '0 0 10px rgba(255, 215, 0, 0.3)'
+      boxShadow: '0 0 10px rgba(239, 68, 68, 0.3)'
     },
 
 
@@ -1374,10 +1374,10 @@ const LeaderboardNew = () => {
         <div style={styles.statsContainer}>
           <div style={styles.statCard}>
             {/* Corner Brackets */}
-            <div style={{position: 'absolute', top: '-2px', left: '-2px', width: '15px', height: '15px', border: '2px solid #FFD700', borderRight: 'none', borderBottom: 'none'}}></div>
-            <div style={{position: 'absolute', top: '-2px', right: '-2px', width: '15px', height: '15px', border: '2px solid #FFD700', borderLeft: 'none', borderBottom: 'none'}}></div>
-            <div style={{position: 'absolute', bottom: '-2px', left: '-2px', width: '15px', height: '15px', border: '2px solid #FFD700', borderRight: 'none', borderTop: 'none'}}></div>
-            <div style={{position: 'absolute', bottom: '-2px', right: '-2px', width: '15px', height: '15px', border: '2px solid #FFD700', borderLeft: 'none', borderTop: 'none'}}></div>
+            <div style={{position: 'absolute', top: '-2px', left: '-2px', width: '15px', height: '15px', border: '2px solid #EF4444', borderRight: 'none', borderBottom: 'none'}}></div>
+            <div style={{position: 'absolute', top: '-2px', right: '-2px', width: '15px', height: '15px', border: '2px solid #EF4444', borderLeft: 'none', borderBottom: 'none'}}></div>
+            <div style={{position: 'absolute', bottom: '-2px', left: '-2px', width: '15px', height: '15px', border: '2px solid #EF4444', borderRight: 'none', borderTop: 'none'}}></div>
+            <div style={{position: 'absolute', bottom: '-2px', right: '-2px', width: '15px', height: '15px', border: '2px solid #EF4444', borderLeft: 'none', borderTop: 'none'}}></div>
 
             <div style={styles.statLabel}>📊 TOTAL TEAMS</div>
             <div style={styles.statValue}>{leaderboardData.length}</div>
@@ -1385,10 +1385,10 @@ const LeaderboardNew = () => {
 
           <div style={styles.statCard}>
             {/* Corner Brackets */}
-            <div style={{position: 'absolute', top: '-2px', left: '-2px', width: '15px', height: '15px', border: '2px solid #FFD700', borderRight: 'none', borderBottom: 'none'}}></div>
-            <div style={{position: 'absolute', top: '-2px', right: '-2px', width: '15px', height: '15px', border: '2px solid #FFD700', borderLeft: 'none', borderBottom: 'none'}}></div>
-            <div style={{position: 'absolute', bottom: '-2px', left: '-2px', width: '15px', height: '15px', border: '2px solid #FFD700', borderRight: 'none', borderTop: 'none'}}></div>
-            <div style={{position: 'absolute', bottom: '-2px', right: '-2px', width: '15px', height: '15px', border: '2px solid #FFD700', borderLeft: 'none', borderTop: 'none'}}></div>
+            <div style={{position: 'absolute', top: '-2px', left: '-2px', width: '15px', height: '15px', border: '2px solid #EF4444', borderRight: 'none', borderBottom: 'none'}}></div>
+            <div style={{position: 'absolute', top: '-2px', right: '-2px', width: '15px', height: '15px', border: '2px solid #EF4444', borderLeft: 'none', borderBottom: 'none'}}></div>
+            <div style={{position: 'absolute', bottom: '-2px', left: '-2px', width: '15px', height: '15px', border: '2px solid #EF4444', borderRight: 'none', borderTop: 'none'}}></div>
+            <div style={{position: 'absolute', bottom: '-2px', right: '-2px', width: '15px', height: '15px', border: '2px solid #EF4444', borderLeft: 'none', borderTop: 'none'}}></div>
 
             <div style={styles.statLabel}>📈 AVERAGE SCORE</div>
             <div style={styles.statValue}>
@@ -1400,10 +1400,10 @@ const LeaderboardNew = () => {
 
           <div style={styles.statCard}>
             {/* Corner Brackets */}
-            <div style={{position: 'absolute', top: '-2px', left: '-2px', width: '15px', height: '15px', border: '2px solid #FFD700', borderRight: 'none', borderBottom: 'none'}}></div>
-            <div style={{position: 'absolute', top: '-2px', right: '-2px', width: '15px', height: '15px', border: '2px solid #FFD700', borderLeft: 'none', borderBottom: 'none'}}></div>
-            <div style={{position: 'absolute', bottom: '-2px', left: '-2px', width: '15px', height: '15px', border: '2px solid #FFD700', borderRight: 'none', borderTop: 'none'}}></div>
-            <div style={{position: 'absolute', bottom: '-2px', right: '-2px', width: '15px', height: '15px', border: '2px solid #FFD700', borderLeft: 'none', borderTop: 'none'}}></div>
+            <div style={{position: 'absolute', top: '-2px', left: '-2px', width: '15px', height: '15px', border: '2px solid #EF4444', borderRight: 'none', borderBottom: 'none'}}></div>
+            <div style={{position: 'absolute', top: '-2px', right: '-2px', width: '15px', height: '15px', border: '2px solid #EF4444', borderLeft: 'none', borderBottom: 'none'}}></div>
+            <div style={{position: 'absolute', bottom: '-2px', left: '-2px', width: '15px', height: '15px', border: '2px solid #EF4444', borderRight: 'none', borderTop: 'none'}}></div>
+            <div style={{position: 'absolute', bottom: '-2px', right: '-2px', width: '15px', height: '15px', border: '2px solid #EF4444', borderLeft: 'none', borderTop: 'none'}}></div>
 
             <div style={styles.statLabel}>🏆 TOP SCORE</div>
             <div style={styles.statValue}>
@@ -1415,10 +1415,10 @@ const LeaderboardNew = () => {
 
           <div style={styles.statCard}>
             {/* Corner Brackets */}
-            <div style={{position: 'absolute', top: '-2px', left: '-2px', width: '15px', height: '15px', border: '2px solid #FFD700', borderRight: 'none', borderBottom: 'none'}}></div>
-            <div style={{position: 'absolute', top: '-2px', right: '-2px', width: '15px', height: '15px', border: '2px solid #FFD700', borderLeft: 'none', borderBottom: 'none'}}></div>
-            <div style={{position: 'absolute', bottom: '-2px', left: '-2px', width: '15px', height: '15px', border: '2px solid #FFD700', borderRight: 'none', borderTop: 'none'}}></div>
-            <div style={{position: 'absolute', bottom: '-2px', right: '-2px', width: '15px', height: '15px', border: '2px solid #FFD700', borderLeft: 'none', borderTop: 'none'}}></div>
+            <div style={{position: 'absolute', top: '-2px', left: '-2px', width: '15px', height: '15px', border: '2px solid #EF4444', borderRight: 'none', borderBottom: 'none'}}></div>
+            <div style={{position: 'absolute', top: '-2px', right: '-2px', width: '15px', height: '15px', border: '2px solid #EF4444', borderLeft: 'none', borderBottom: 'none'}}></div>
+            <div style={{position: 'absolute', bottom: '-2px', left: '-2px', width: '15px', height: '15px', border: '2px solid #EF4444', borderRight: 'none', borderTop: 'none'}}></div>
+            <div style={{position: 'absolute', bottom: '-2px', right: '-2px', width: '15px', height: '15px', border: '2px solid #EF4444', borderLeft: 'none', borderTop: 'none'}}></div>
 
             <div style={styles.statLabel}>✅ VERIFIED</div>
             <div style={styles.statValue}>
@@ -1443,11 +1443,11 @@ const LeaderboardNew = () => {
               onChange={(e) => setSearchTerm(e.target.value)}
               style={styles.searchInput}
               onFocus={(e) => {
-                e.target.style.borderColor = '#FFD700';
-                e.target.style.boxShadow = '0 0 20px rgba(255, 215, 0, 0.4)';
+                e.target.style.borderColor = '#EF4444';
+                e.target.style.boxShadow = '0 0 20px rgba(239, 68, 68, 0.4)';
               }}
               onBlur={(e) => {
-                e.target.style.borderColor = 'rgba(255, 215, 0, 0.3)';
+                e.target.style.borderColor = 'rgba(239, 68, 68, 0.3)';
                 e.target.style.boxShadow = 'none';
               }}
             />
@@ -1458,11 +1458,11 @@ const LeaderboardNew = () => {
             onChange={(e) => setStatusFilter(e.target.value)}
             style={styles.filterSelect}
             onFocus={(e) => {
-              e.target.style.borderColor = '#FFD700';
-              e.target.style.boxShadow = '0 0 20px rgba(255, 215, 0, 0.4)';
+              e.target.style.borderColor = '#EF4444';
+              e.target.style.boxShadow = '0 0 20px rgba(239, 68, 68, 0.4)';
             }}
             onBlur={(e) => {
-              e.target.style.borderColor = 'rgba(255, 215, 0, 0.3)';
+              e.target.style.borderColor = 'rgba(239, 68, 68, 0.3)';
               e.target.style.boxShadow = 'none';
             }}
           >
@@ -1514,7 +1514,7 @@ const LeaderboardNew = () => {
 
                 {/* Rank Indicator - GTA Style */}
                 <div style={{ ...styles.rankIndicator }}>
-                  <span style={{ color: '#FFD700', textShadow: '0 0 10px rgba(255, 215, 0, 0.8)' }}>
+                  <span style={{ color: '#EF4444', textShadow: '0 0 10px rgba(239, 68, 68, 0.8)' }}>
                     {team.position <= 3 ? '★'.repeat(Math.min(team.position, 5)) : `#${team.position}`}
                   </span>
                 </div>
@@ -1529,7 +1529,7 @@ const LeaderboardNew = () => {
                       </div>
                     )}
                     {team.status === 'pending' && (
-                      <div style={{...styles.statusBadge, color: '#F39C12', borderColor: '#F39C12', boxShadow: '0 0 10px rgba(243, 156, 18, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.5)'}}>
+                      <div style={{...styles.statusBadge, color: '#DC2626', borderColor: '#DC2626', boxShadow: '0 0 10px rgba(220, 38, 38, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.5)'}}>
                         ⏳ PENDING
                       </div>
                     )}
@@ -1634,22 +1634,22 @@ const LeaderboardNew = () => {
             {/* GTA 5 Corner Brackets for Dashboard - Animated */}
             <div style={{
               position: 'absolute', top: '-3px', left: '-3px', width: '30px', height: '30px',
-              border: '3px solid #FFD700', borderRight: 'none', borderBottom: 'none', zIndex: 10,
+              border: '3px solid #EF4444', borderRight: 'none', borderBottom: 'none', zIndex: 10,
               animation: 'bracketGlow 2.5s ease-in-out infinite'
             }}></div>
             <div style={{
               position: 'absolute', top: '-3px', right: '-3px', width: '30px', height: '30px',
-              border: '3px solid #FFD700', borderLeft: 'none', borderBottom: 'none', zIndex: 10,
+              border: '3px solid #EF4444', borderLeft: 'none', borderBottom: 'none', zIndex: 10,
               animation: 'bracketGlow 2.5s ease-in-out infinite'
             }}></div>
             <div style={{
               position: 'absolute', bottom: '-3px', left: '-3px', width: '30px', height: '30px',
-              border: '3px solid #FFD700', borderRight: 'none', borderTop: 'none', zIndex: 10,
+              border: '3px solid #EF4444', borderRight: 'none', borderTop: 'none', zIndex: 10,
               animation: 'bracketGlow 2.5s ease-in-out infinite'
             }}></div>
             <div style={{
               position: 'absolute', bottom: '-3px', right: '-3px', width: '30px', height: '30px',
-              border: '3px solid #FFD700', borderLeft: 'none', borderTop: 'none', zIndex: 10,
+              border: '3px solid #EF4444', borderLeft: 'none', borderTop: 'none', zIndex: 10,
               animation: 'bracketGlow 2.5s ease-in-out infinite'
             }}></div>
 
@@ -1668,14 +1668,14 @@ const LeaderboardNew = () => {
                       onMouseEnter={(e) => {
                         e.target.style.background = 'rgba(0, 0, 0, 0.95)';
                         e.target.style.transform = 'scale(1.1)';
-                        e.target.style.borderColor = '#FFD700';
-                        e.target.style.boxShadow = '0 0 30px rgba(255, 215, 0, 0.8), inset 0 0 15px rgba(0, 0, 0, 0.5)';
+                        e.target.style.borderColor = '#EF4444';
+                        e.target.style.boxShadow = '0 0 30px rgba(239, 68, 68, 0.8), inset 0 0 15px rgba(0, 0, 0, 0.5)';
                       }}
                       onMouseLeave={(e) => {
                         e.target.style.background = 'rgba(0, 0, 0, 0.9)';
                         e.target.style.transform = 'scale(1)';
-                        e.target.style.borderColor = 'rgba(255, 215, 0, 0.6)';
-                        e.target.style.boxShadow = '0 0 15px rgba(255, 215, 0, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.5)';
+                        e.target.style.borderColor = 'rgba(239, 68, 68, 0.6)';
+                        e.target.style.boxShadow = '0 0 15px rgba(239, 68, 68, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.5)';
                       }}
                     >
                       ✕
@@ -1722,7 +1722,7 @@ const LeaderboardNew = () => {
                               <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                                 <stop offset="0%" stopColor="#00A8FF" />
                                 <stop offset="50%" stopColor="#2ECC71" />
-                                <stop offset="100%" stopColor="#F39C12" />
+                                <stop offset="100%" stopColor="#DC2626" />
                               </linearGradient>
                             </defs>
                           </svg>
@@ -1761,13 +1761,13 @@ const LeaderboardNew = () => {
                           <h3 style={{
                             fontSize: '1.5rem',
                             fontWeight: '900',
-                            color: '#FFD700',
+                            color: '#EF4444',
                             marginBottom: '1.5rem',
                             textAlign: 'center',
                             fontFamily: '"Courier New", monospace',
                             textTransform: 'uppercase',
                             letterSpacing: '0.15em',
-                            textShadow: '0 0 20px rgba(255, 215, 0, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.8)'
+                            textShadow: '0 0 20px rgba(239, 68, 68, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.8)'
                           }}>
                             Performance Breakdown
                           </h3>
@@ -1854,7 +1854,7 @@ const LeaderboardNew = () => {
                                 <div style={{
                                   width: `${(performance.manoeuvrability.total / 50) * 100}%`,
                                   height: '100%',
-                                  background: 'linear-gradient(90deg, #2ECC71, #F39C12)',
+                                  background: 'linear-gradient(90deg, #2ECC71, #DC2626)',
                                   borderRadius: '10px',
                                   transition: 'width 1s ease-out'
                                 }}></div>
@@ -1894,7 +1894,7 @@ const LeaderboardNew = () => {
                                 <div style={{
                                   width: `${(performance.durability.total / 50) * 100}%`,
                                   height: '100%',
-                                  background: 'linear-gradient(90deg, #F39C12, #E67E22)',
+                                  background: 'linear-gradient(90deg, #DC2626, #B91C1C)',
                                   borderRadius: '10px',
                                   transition: 'width 1s ease-out'
                                 }}></div>
@@ -1904,7 +1904,7 @@ const LeaderboardNew = () => {
                                 textAlign: 'right',
                                 fontSize: '0.875rem',
                                 fontWeight: '700',
-                                color: '#F39C12'
+                                color: '#DC2626'
                               }}>
                                 {performance.durability.total}/50
                               </div>
@@ -2006,13 +2006,13 @@ const LeaderboardNew = () => {
                           <h3 style={{
                             fontSize: '1.25rem',
                             fontWeight: '900',
-                            color: '#FFD700',
+                            color: '#EF4444',
                             marginBottom: '1rem',
                             textAlign: 'center',
                             fontFamily: '"Courier New", monospace',
                             textTransform: 'uppercase',
                             letterSpacing: '0.15em',
-                            textShadow: '0 0 20px rgba(255, 215, 0, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.8)'
+                            textShadow: '0 0 20px rgba(239, 68, 68, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.8)'
                           }}>
                             Score Distribution
                           </h3>
@@ -2029,7 +2029,7 @@ const LeaderboardNew = () => {
                               const data = [
                                 { label: 'Technical', value: performance.technicalInspection.total, color: '#00A8FF' },
                                 { label: 'Maneuver', value: performance.manoeuvrability.total, color: '#2ECC71' },
-                                { label: 'Durability', value: performance.durability.total, color: '#F39C12' },
+                                { label: 'Durability', value: performance.durability.total, color: '#DC2626' },
                                 { label: 'Pre-final', value: performance.prefinalRace.total, color: '#9B59B6' },
                                 { label: 'Final', value: performance.finalRace.total, color: '#E74C3C' },
                                 { label: 'Bonus', value: performance.mixedTeamBonus, color: '#1ABC9C' }
@@ -2132,12 +2132,12 @@ const LeaderboardNew = () => {
                           <h3 style={{
                             fontSize: '1.25rem',
                             fontWeight: '900',
-                            color: '#FFD700',
+                            color: '#EF4444',
                             marginBottom: '1.5rem',
                             fontFamily: '"Courier New", monospace',
                             textTransform: 'uppercase',
                             letterSpacing: '0.15em',
-                            textShadow: '0 0 20px rgba(255, 215, 0, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.8)'
+                            textShadow: '0 0 20px rgba(239, 68, 68, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.8)'
                           }}>
                             Performance Insights
                           </h3>
@@ -2161,7 +2161,7 @@ const LeaderboardNew = () => {
                                   if (pct >= 90) return 'linear-gradient(135deg, #2ECC71, #27AE60)';
                                   if (pct >= 75) return 'linear-gradient(135deg, #00A8FF, #0077CC)';
                                   if (pct >= 60) return 'linear-gradient(135deg, #9B59B6, #8E44AD)';
-                                  if (pct >= 40) return 'linear-gradient(135deg, #F39C12, #E67E22)';
+                                  if (pct >= 40) return 'linear-gradient(135deg, #DC2626, #B91C1C)';
                                   return 'linear-gradient(135deg, #95A5A6, #7F8C8D)';
                                 })(),
                                 WebkitBackgroundClip: 'text',
@@ -2273,12 +2273,12 @@ const LeaderboardNew = () => {
                           <h3 style={{
                             fontSize: '1.25rem',
                             fontWeight: '900',
-                            color: '#FFD700',
+                            color: '#EF4444',
                             marginBottom: '1.5rem',
                             fontFamily: '"Courier New", monospace',
                             textTransform: 'uppercase',
                             letterSpacing: '0.15em',
-                            textShadow: '0 0 20px rgba(255, 215, 0, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.8)'
+                            textShadow: '0 0 20px rgba(239, 68, 68, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.8)'
                           }}>
                             Detailed Breakdown
                           </h3>
@@ -2322,7 +2322,7 @@ const LeaderboardNew = () => {
                                   style={{
                                     ...styles.progressBar,
                                     width: `${(performance.manoeuvrability.total / 50) * 100}%`,
-                                    background: 'linear-gradient(90deg, #2ECC71, #F39C12)'
+                                    background: 'linear-gradient(90deg, #2ECC71, #DC2626)'
                                   }}
                                 >
                                   <div style={styles.progressGlow}></div>
@@ -2345,7 +2345,7 @@ const LeaderboardNew = () => {
                                   style={{
                                     ...styles.progressBar,
                                     width: `${(performance.durability.total / 50) * 100}%`,
-                                    background: 'linear-gradient(90deg, #F39C12, #E67E22)'
+                                    background: 'linear-gradient(90deg, #DC2626, #B91C1C)'
                                   }}
                                 >
                                   <div style={styles.progressGlow}></div>
@@ -2395,12 +2395,12 @@ const LeaderboardNew = () => {
                           <h3 style={{
                             fontSize: '1.25rem',
                             fontWeight: '900',
-                            color: '#FFD700',
+                            color: '#EF4444',
                             marginBottom: '1rem',
                             fontFamily: '"Courier New", monospace',
                             textTransform: 'uppercase',
                             letterSpacing: '0.15em',
-                            textShadow: '0 0 20px rgba(255, 215, 0, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.8)'
+                            textShadow: '0 0 20px rgba(239, 68, 68, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.8)'
                           }}>
                             Performance Assessment
                           </h3>
@@ -2441,9 +2441,9 @@ const LeaderboardNew = () => {
                                 title: 'Keep Improving',
                                 message: 'Your team has potential. Focus on technical skills and competition strategies for better results.',
                                 icon: '📈',
-                                color: '#F39C12',
-                                bgColor: 'rgba(243, 156, 18, 0.1)',
-                                borderColor: 'rgba(243, 156, 18, 0.3)'
+                                color: '#DC2626',
+                                bgColor: 'rgba(220, 38, 38, 0.1)',
+                                borderColor: 'rgba(220, 38, 38, 0.3)'
                               };
                             } else {
                               feedback = {
@@ -2601,11 +2601,11 @@ const LeaderboardNew = () => {
           @keyframes bracketGlow {
             0%, 100% {
               opacity: 0.6;
-              box-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
+              box-shadow: 0 0 5px rgba(239, 68, 68, 0.3);
             }
             50% {
               opacity: 1;
-              box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.4);
+              box-shadow: 0 0 20px rgba(239, 68, 68, 0.8), 0 0 40px rgba(239, 68, 68, 0.4);
             }
           }
 
